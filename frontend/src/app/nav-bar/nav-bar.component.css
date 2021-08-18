@@ -1,0 +1,19 @@
+.navbar-dark {
+  background-color: rgba(5, 13, 39, 1);
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+.navbar-brand > img {
+  width: 150px;
+}
+#botonRegistro {
+  background: linear-gradient(37deg, #0731A5,#14E7FF);
+  border: 0px;
+}
+
+#botonLogin{
+  color: #ddd;
+}
+#newUser{
+  color: floralwhite;
+}
