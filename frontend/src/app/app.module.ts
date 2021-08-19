@@ -2,12 +2,18 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { appRoutingModule } from './app.routing';
+
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { BannerComponent } from './banner/banner.component';
-import { ServicesComponent } from './services/services.component';
-import { DemoComponent } from './demo/demo.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavBarComponent } from './home/nav-bar/nav-bar.component';
+import { BannerComponent } from './home/banner/banner.component';
+import { ServicesComponent } from './home/services/services.component';
+import { DemoComponent } from './home/demo/demo.component';
+import { FooterComponent } from './home/footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { NoticiasComponent } from './noticias/noticias.component';
+import { EquipoComponent } from './equipo/equipo.component';
+import { ContactanosComponent } from './contactanos/contactanos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,11 +21,16 @@ import { FooterComponent } from './footer/footer.component';
     BannerComponent,
     ServicesComponent,
     DemoComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    NoticiasComponent,
+    EquipoComponent,
+    ContactanosComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    appRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

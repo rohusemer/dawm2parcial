@@ -1,0 +1,81 @@
+.team .row, .programmers .row {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.programmers .container{
+  width: 992px;
+  max-width: 100%;
+  padding-bottom: 100px;
+}
+
+.programmers .col-6 {
+  flex: 0 0 calc(50% - 10px);
+  max-width: calc(50% - 10px);
+}
+.team-item{
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.15);
+  display: flex;
+  flex-flow: column;
+}
+
+.team-item .team__item__thumbnail {
+  height: 320px;
+}
+
+.team__item__thumbnail {
+  height: 220px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin: -20px -20px 20px;
+  width: calc(100% + 40px);
+}
+
+.team-item .socials {
+  margin-top: auto;
+  justify-content: center;
+}
+.socials {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+blockquote, ol, ul {
+  margin: 0;
+      margin-top: 0px;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+ol, ul {
+  list-style: none;
+}
+
+.socials a img, .socials a svg {
+  display: block;
+  height: 24px;
+  width: auto;
+}
+
+header{
+  min-height: 82px;
+}
+
+body{
+  padding-top: 82px;
+}
+
+
+.team h1{
+  padding-bottom: 15px;
+}

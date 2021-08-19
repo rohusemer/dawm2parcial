@@ -1,0 +1,166 @@
+<app-nav-bar></app-nav-bar>
+<div class="container contactanos">
+  <div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="madal-tittle">Login</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label for="usrname"><span class="fa fa-user"></span> Username or Email</label>
+                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="psw"><span class="fa fa-eye"></span> Password</label>
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-check">
+                              <div class="options text-md-left">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label"> Remember me </label>
+                              </div>
+                                <div class="text-center text-md-right">
+                                  <p>Not a member? <a href="signup.html" class="blue-text">Sign Up</a></p>
+                                  <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                    <button id="SigC" type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                    <button id="SigL" type="button" class="btn btn-primary btn-sm ml-1">Sign in</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  <main id="main">
+    <div class="row">
+      <div class="col-12">
+        <br>
+        <h3>Contacta con nosotros</h3>
+        <hr>
+      </div>
+  </div>
+
+    <!-- ======= Contact Section ======= -->
+    <section class="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="row">
+              <img src="../../assets/img/contact-us.jpg" alt="" >
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <!--i class="bx bx-map"></i-->
+                  <h3>Nos encuentras en</h3>
+                  <p>ESPOL, Campus "Gustavo Galindo" Km. 30.5 Vía Perimetral</p>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="info-box">
+                  <h3>Escríbenos al correo</h3>
+                  <p>soulprogrammers@espol.edu.ec</p>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="info-box">
+                  <h3>También puedes llamarnos a</h3>
+                  <p>+593 09xxxxxxxx</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <form>
+
+      <div class="col-md-12">
+          <h4>Llena nuestro formulario y nos pondremos en contacto contigo lo antes posible.<br></h4>
+      </div>
+
+      <div class="form-group-name">       <!-- Full Name -->
+          <label for="full_name_id" class="control-label">Nombres y Apellidos</label>
+          <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="Escribe tu nombre"><br>
+
+          <div class="form-group-fecha"> <!-- Fecha de nacimiento-->
+              <label for="fecha" class="control-label">Fecha de nacimiento</label><br>
+              <input type="date" class="form-control" name="fecha">
+          </div>
+      </div>
+
+
+      <div class="form-group"> <!-- Lugar de origen: provincia -->
+          <label for="state_id" class="control-label"><br>Provincia</label>
+          <select class="form-control" id="state_id">
+              <option value="DEF">Elige una provincia</option>
+              <option value="AZ">Azuay</option>
+              <option value="BO">Bolívar</option>
+              <option value="CA">Cañar</option>
+              <option value="CAR">Carchi</option>
+              <option value="CH">Chimborazo</option>
+              <option value="CO">Cotopaxi</option>
+              <option value="EO">El Oro</option>
+              <option value="ES">Esmeradas</option>
+              <option value="GA">Galápagos</option>
+              <option value="GU">Guayas</option>
+              <option value="IM">Imbabura</option>
+              <option value="LO">Loja</option>
+              <option value="LR">Los Ríos</option>
+              <option value="MA">Manabí</option>
+              <option value="MS">Morona Santiago</option>
+              <option value="NA">Napo</option>
+              <option value="OR">Orellana</option>
+              <option value="PA">Pastaza</option>
+              <option value="PI">Pichincha</option>
+              <option value="SE">Santa Elena</option>
+              <option value="SD">Santo Domingo de los Tsáchilas</option>
+              <option value="SU">Sucumbíos</option>
+              <option value="TU">Tungurahua</option>
+              <option value="ZC">Zamora Chinchipe</option>
+          </select>
+      </div>
+
+      <div class="form-group-email"> <!-- Correo de contacto-->
+          <label for="email_id" class="control-label">Correo electrónico</label>
+          <input type="text" class="form-control" id="email_id" name="email" placeholder="xxxx@xxxx.com">
+      </div>
+
+      <div class="form-group mt-3">
+        <label for="email_id" class="control-label">Detalle</label>
+        <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+      </div>
+
+
+      <div class="text-center"><button type="submit">Enviar</button></div>
+    </form>
+
+
+
+      </div>
+    </div>
+    </section><!-- End Contact Section -->
+
+    <!-- ======= Map Section ======= -->
+
+    <section class="map mt-2">
+      <div class="container-fluid p-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15948.058677917108!2d-79.9644896!3d-2.1480702!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x327cdb9f7f4ba3b2!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses-419!2sec!4v1624488619681!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section><!-- End Map Section -->
+
+
+  </main>
+</div>
+<app-footer></app-footer>

@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  background-image: url(../../assets/img/5524702.png),linear-gradient(to top, rgba(5, 13, 39, 1) 0%,rgba(15, 13, 39, 1) 100%), url(/img/bg-2.jpg);
+  background-image: url(../../../assets/img/5524702.png),linear-gradient(to top, rgba(5, 13, 39, 1) 0%,rgba(15, 13, 39, 1) 100%), url(/img/bg-2.jpg);
   min-height: 100vh;
   background-size: cover;
   background-position: center;
