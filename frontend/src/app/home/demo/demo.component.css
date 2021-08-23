@@ -1,0 +1,16 @@
+.appdemo {
+  margin-top: 100px;
+  padding-bottom: 20px;
+  margin-bottom: 100px;
+}
+
+.appdemo .row div{
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.appdemo h2{
+  text-align: left;
+  font-weight: 1000;
+}
