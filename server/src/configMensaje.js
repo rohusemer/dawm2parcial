@@ -5,7 +5,7 @@ module.exports = (contactanos) => {
     service: 'gmail',
     auth: {
       user: 'haivcarr@gmail.com', // Cambialo por tu email
-      pass: 'vampireushpdc99' // Cambialo por tu password
+      pass: '' // Cambialo por tu password
     }
   });
 
