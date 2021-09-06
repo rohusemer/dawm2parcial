@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 const configMensaje = require('./src/configMensaje.js')
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var clienteRouter = require('./routes/cliente.rutas');
 
 var app = express();
@@ -28,6 +27,7 @@ app.use('/api/cliente', clienteRouter);
 app.post('/contactanos', (req, res) => {
 	configMensaje(req.body)
 })
+
 app.listen(3000, () => {
 console.log('Servidor corriendo')
 });

@@ -26,6 +26,14 @@ module.exports = function(sequelize, DataTypes) {
     cedula: {
       type: DataTypes.STRING(10),
       allowNull: false
+    },
+    usuario: {
+      type: DataTypes.STRING(45),
+      allowNull: false
+    },
+    password: {
+      type: DataTypes.STRING(15),
+      allowNull: false
     }
   }, {
     sequelize,
