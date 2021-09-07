@@ -31,7 +31,7 @@ clienteCtrl.createCliente = function (req, res, next) {
       f_nacimiento: f_nacimiento,
       cedula: cedula,
       usuario: user,
-      password: pass,
+      password: pass
         
     })
     .then(clientes => {
@@ -57,7 +57,7 @@ clienteCtrl.getCliente = function (req, res, next) {
 
 clienteCtrl.editCliente = function (req, res, next) {
   let id = req.params.id;
-  let nombre = req.body.nombre;
+  let nombre = req.body.nombre; //poner los nombres de los imput
   let apellidos = req.body.apellido;
   let correro = req.body.correro;
   let f_nacimiento = req.body.f_nacimiento;
@@ -72,7 +72,7 @@ clienteCtrl.editCliente = function (req, res, next) {
       f_nacimiento: f_nacimiento,
       cedula: cedula,
       usuario: user,
-      password: pass,
+      password: pass
         
     }, {
        where: {

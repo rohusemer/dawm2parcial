@@ -8,6 +8,7 @@ const configMensaje = require('./src/configMensaje.js')
 
 var indexRouter = require('./routes/index');
 var clienteRouter = require('./routes/cliente.rutas');
+var registroRouter = require('./routes/registro.rutas');
 
 var app = express();
 app.use(bodyParser.json());
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/cliente', clienteRouter);
+app.use('/api/registro', registroRouter);
 
 app.post('/contactanos', (req, res) => {
 	configMensaje(req.body)
