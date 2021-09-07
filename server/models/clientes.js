@@ -12,20 +12,16 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     },
     apellidos: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     correro: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    f_nacimiento: {
-      type: DataTypes.DATEONLY,
-      allowNull: false
-    },
-    cedula: {
-      type: DataTypes.STRING(10),
-      allowNull: false
+    salario: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   }, {
     sequelize,
