@@ -3,14 +3,26 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
+<<<<<<< HEAD
+    "types": ["jquery","bootstrap"]
+=======
     "moduleResolution": "node",
     "types": ["node"]
+>>>>>>> f41487eb16c54caf180e60dd3d0804c8a1fd2951
   },
   "files": [
     "src/main.ts",
     "src/polyfills.ts"
   ],
   "include": [
+<<<<<<< HEAD
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+      "test.ts",
+      "**/*.spec.ts"
+=======
     "src/**/*.d.ts", "tests/**/*.ts"
+>>>>>>> f41487eb16c54caf180e60dd3d0804c8a1fd2951
   ]
 }

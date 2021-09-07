@@ -1,0 +1,110 @@
+
+<body>
+    <!--<div>
+        <img src="img/logo-01.png" alt="logo" https://image.ibb.co/n7oTvU/logo_white.png>
+    </div>-->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-tittle">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <label for="usrname"><span class="fa fa-user"></span> Username</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="psw"><span class="fa fa-eye"></span> Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-check">
+                                  <div class="text-md-left">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me </label>
+                                  </div>
+
+                                    <div class="text-center text-md-right">
+                                      <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                                      <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                        <button id="SigC" type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                        <button id="SigL" type="button" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <a href="index.html">
+                    <img src="../../assets/img/logo-01.png" alt="logo" >
+                </a>
+                <h3>Bienvenido</h3>
+                <p>Regístrate para comenzar a administrar tu dinero de manera inteligente!</p>
+                <!--span id="botonLogin">
+                    <a><input type="submit" name="" value="Iniciar Sesión"/><br/></a>
+                    <--a>Iniciar Sesion</-a>
+                </span-->
+                <a id="botonLogin"><input type="submit" name="" value="Iniciar Sesión"/><br/></a>
+            </div>
+            <div class="col-md-9 register-right">
+                <div  id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Ingresa tus Datos</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Nombre" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Apellido" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Contraseña" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control"  placeholder="Fecha de Nacimiento" value="" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Cédula" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="User" value="" />
+                                </div>
+                                <a id="btnLogin" href="index.html"><input type="submit" class="btnRegister"name="" value="Registrar"/><br/></a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild-->
+</body>

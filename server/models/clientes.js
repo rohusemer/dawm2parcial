@@ -12,13 +12,18 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     },
     apellidos: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     correro: {
-      type: DataTypes.STRING(30),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
+<<<<<<< HEAD
+    salario: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+=======
     f_nacimiento: {
       type: DataTypes.DATEONLY,
       allowNull: false
@@ -34,6 +39,7 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING(15),
       allowNull: false
+>>>>>>> f41487eb16c54caf180e60dd3d0804c8a1fd2951
     }
   }, {
     sequelize,
