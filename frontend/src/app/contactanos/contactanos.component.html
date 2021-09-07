@@ -84,7 +84,8 @@
 
           </div>
 
-          <form>
+      <!-- <form (ngSubmit)="contactForm(form.value)" #form="ngForm"> -->
+        <form (ngSubmit)="contactForm(form.value)" #form="ngForm" >
 
       <div class="col-md-12">
           <h4>Llena nuestro formulario y nos pondremos en contacto contigo lo antes posible.<br></h4>
@@ -92,18 +93,18 @@
 
       <div class="form-group-name">       <!-- Full Name -->
           <label for="full_name_id" class="control-label">Nombres y Apellidos</label>
-          <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="Escribe tu nombre"><br>
+          <input type="text" class="form-control" id="full_name_id" name="nombres" placeholder="Escribe tu nombre" required="" ngModel><br>
 
           <div class="form-group-fecha"> <!-- Fecha de nacimiento-->
-              <label for="fecha" class="control-label">Fecha de nacimiento</label><br>
-              <input type="date" class="form-control" name="fecha">
+              <label for="fecha" class="control-label" >Fecha de nacimiento</label><br>
+              <input type="date" class="form-control" name="fecha" required="" ngModel>
           </div>
       </div>
 
 
       <div class="form-group"> <!-- Lugar de origen: provincia -->
           <label for="state_id" class="control-label"><br>Provincia</label>
-          <select class="form-control" id="state_id">
+          <select class="form-control" id="state_id" name=provincia>
               <option value="DEF">Elige una provincia</option>
               <option value="AZ">Azuay</option>
               <option value="BO">Bolívar</option>
@@ -134,16 +135,16 @@
 
       <div class="form-group-email"> <!-- Correo de contacto-->
           <label for="email_id" class="control-label">Correo electrónico</label>
-          <input type="text" class="form-control" id="email_id" name="email" placeholder="xxxx@xxxx.com">
+          <input type="text" class="form-control" id="email_id" name="email" placeholder="xxxx@xxxx.com" required="" ngModel>
       </div>
 
       <div class="form-group mt-3">
         <label for="email_id" class="control-label">Detalle</label>
-        <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+        <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required="" ngModel></textarea>
       </div>
 
 
-      <div class="text-center"><button type="submit">Enviar</button></div>
+      <div class="text-center"><button type="submit" class= "btn btn-primary btn-block">Enviar</button></div>
     </form>
 
 
