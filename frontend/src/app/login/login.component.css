@@ -1,0 +1,25 @@
+.modal-header {
+  color: floralwhite;
+  background: #0F0D27; }
+  .modal-header .close {
+    color: floralwhite;
+    float: right;
+    font-size: 28px;
+    font-weight: bold; }
+
+.modal-body {
+  background: linear-gradient(37deg, #0731A5,#14E7FF);
+  color: floralwhite;
+  align-content: center;
+  justify-content: center;
+}  .text-center{
+  color: floralwhite;
+  } .blue-text{
+  color: blue;
+  text-decoration: underline;
+}
+
+.modal-footer{
+  color: floralwhite;
+  background: #0F0D27;
+}

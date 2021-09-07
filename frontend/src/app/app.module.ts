@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { EquipoComponent } from './equipo/equipo.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { ContactanosComponent } from './contactanos/contactanos.component';
     HomeComponent,
     NoticiasComponent,
     EquipoComponent,
-    ContactanosComponent
+    ContactanosComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
