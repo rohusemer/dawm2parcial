@@ -17,12 +17,8 @@ import { HomeComponent } from './home/home.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { EquipoComponent } from './equipo/equipo.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
-<<<<<<< HEAD
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
-=======
-
->>>>>>> f41487eb16c54caf180e60dd3d0804c8a1fd2951
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,11 +31,8 @@ import { RegistroComponent } from './registro/registro.component';
     NoticiasComponent,
     EquipoComponent,
     ContactanosComponent,
-<<<<<<< HEAD
     LoginComponent,
     RegistroComponent
-=======
->>>>>>> f41487eb16c54caf180e60dd3d0804c8a1fd2951
   ],
   imports: [
     BrowserModule,
