@@ -1,35 +1,30 @@
 <body class="text-center">
     
-    <main class="form-signin">
-      <form>
+    <main class="form-signin fade-in">
+      <form action="">
         <a routerLink='/' ><img class="mb-4" src="../assets/img/logo-01.png" alt="Moneytracker logo" width="auto" height="100"></a>
         <h1 class="h3 mb-3 fw-normal">¡Creemos tu nueva cuenta!</h1>
-        <form action="">
-            <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputNombre" placeholder="Pepito">
-                <label for="floatingInputNombre">Nombre</label>
-            </div>
-            <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputApellido" placeholder="Sanchez">
-                <label for="floatingInputApellido">Apellido</label>
-            </div>
-            <div class="form-floating">
-                <input type="date" class="form-control" id="floatingInputFechaNacimiento" placeholder="">
-                <label for="floatingInputFechaNacimiento">Fecha de Nacimiento</label>
-            </div>
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInputCorreo" placeholder="correo@ejemplo.com">
-                <label for="floatingInputCorreo">Correo Electrónico</label>
-            </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Clave">
-                <label for="floatingPassword">Clave</label>
-            </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Registrarse</button>
-        </form>
-       
-    
-       
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInputNombre" placeholder="Pepito">
+            <label for="floatingInputNombre">Nombre</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInputApellido" placeholder="Sanchez">
+            <label for="floatingInputApellido">Apellido</label>
+        </div>
+        <div class="form-floating">
+            <input type="date" class="form-control" id="floatingInputFechaNacimiento" placeholder="">
+            <label for="floatingInputFechaNacimiento">Fecha de Nacimiento</label>
+        </div>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInputCorreo" placeholder="correo@ejemplo.com">
+            <label for="floatingInputCorreo">Correo Electrónico</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Clave">
+            <label for="floatingPassword">Clave</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Registrarse</button>
         <p class="mt-5 mb-3 text-muted">¿Ya tienes una cuenta?</p>
         <a routerLink='/login'>Inicia Sesión aquí</a>
       </form>
