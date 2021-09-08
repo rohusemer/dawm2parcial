@@ -1,17 +1,5 @@
 var DataTypes = require("sequelize").DataTypes;
 var _clientes = require("./clientes");
-<<<<<<< HEAD
-var _sequelizemeta = require("./sequelizemeta");
-
-function initModels(sequelize) {
-  var clientes = _clientes(sequelize, DataTypes);
-  var sequelizemeta = _sequelizemeta(sequelize, DataTypes);
-
-
-  return {
-    clientes,
-    sequelizemeta,
-=======
 var _cuenta = require("./cuenta");
 var _registros = require("./registros");
 
@@ -31,7 +19,6 @@ function initModels(sequelize) {
     clientes,
     cuenta,
     registros,
->>>>>>> f41487eb16c54caf180e60dd3d0804c8a1fd2951
   };
 }
 module.exports = initModels;

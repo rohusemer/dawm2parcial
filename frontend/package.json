@@ -36,12 +36,8 @@
     "@angular/compiler-cli": "~12.1.1",
     "@types/bootstrap": "^5.1.2",
     "@types/jasmine": "~3.6.0",
-<<<<<<< HEAD
     "@types/jquery": "^3.5.6",
     "@types/node": "^12.11.1",
-=======
-    "@types/node": "^12.20.21",
->>>>>>> f41487eb16c54caf180e60dd3d0804c8a1fd2951
     "jasmine-core": "^3.7.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

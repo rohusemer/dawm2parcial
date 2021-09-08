@@ -21,7 +21,7 @@ registroCtrl.createRegistro = function (req, res, next) {
   let tipo = req.body.tipo;
   let monto = req.body.monto;
   let fecha = req.body.fecha;
-  let categira = req.body.categira;
+  let categoria = req.body.categoria;
   let descripcion = req.body.descripcion;
 
     models.registros.create({
@@ -30,7 +30,7 @@ registroCtrl.createRegistro = function (req, res, next) {
       tipo: tipo,
       monto: monto,
       fecha: fecha,
-      categira: categira,
+      categoria: categoria,
       descripcion: descripcion
         
     })
@@ -62,7 +62,7 @@ registroCtrl.editRegistro = function (req, res, next) {
   let tipo = req.body.tipo;
   let monto = req.body.monto;
   let fecha = req.body.fecha;
-  let categira = req.body.categira;
+  let categoria = req.body.categoria;
   let descripcion = req.body.descripcion;
 
     models.registros.update({
@@ -71,7 +71,7 @@ registroCtrl.editRegistro = function (req, res, next) {
       tipo: tipo,
       monto: monto,
       fecha: fecha,
-      categira: categira,
+      categoria: categoria,
       descripcion: descripcion
         
     }, {
