@@ -1,25 +1,46 @@
-.modal-header {
-  color: floralwhite;
-  background: #0F0D27; }
-  .modal-header .close {
-    color: floralwhite;
-    float: right;
-    font-size: 28px;
-    font-weight: bold; }
-
-.modal-body {
-  background: linear-gradient(37deg, #0731A5,#14E7FF);
-  color: floralwhite;
-  align-content: center;
-  justify-content: center;
-}  .text-center{
-  color: floralwhite;
-  } .blue-text{
-  color: blue;
-  text-decoration: underline;
+body {
+  height: 100%;
 }
 
-.modal-footer{
-  color: floralwhite;
-  background: #0F0D27;
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: url("../../assets/img/5524702.png"),linear-gradient(to top, rgba(5, 13, 39, 1) 0%,rgba(15, 13, 39, 1) 100%);
+  background-size: cover;
+  height: 100vh;
 }
+
+h1{
+  color: white;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
