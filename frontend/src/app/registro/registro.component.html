@@ -4,66 +4,27 @@
       <form action="">
         <a routerLink='/' ><img class="mb-4" src="../assets/img/logo-01.png" alt="Moneytracker logo" width="auto" height="100"></a>
         <h1 class="h3 mb-3 fw-normal">¡Creemos tu nueva cuenta!</h1>
-        <form action="">
-            <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputNombre" placeholder="Pepito">
-                <label for="floatingInputNombre">Nombre</label>
-            </div>
-            <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputApellido" placeholder="Sanchez">
-                <label for="floatingInputApellido">Apellido</label>
-            </div>
-            <div class="col-md-9 register-right">
-                <div  id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <h3 class="register-heading">Ingresa tus Datos</h3>
-                        <div class="row register-form">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="apellido" class="form-control" placeholder="Apellido" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" name="pass" class="form-control" placeholder="Contraseña" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="date" name="fechanacimiento" class="form-control"  placeholder="Fecha de Nacimiento" value="" />
-                                </div>
-
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="email" name="correo" class="form-control" placeholder="Email" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="cedula" maxlength="10"  class="form-control" placeholder="Cédula" value="" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="user" class="form-control" placeholder="User" value="" />
-                                </div>
-                                <a id="btnLogin" href="index.html"><input type="submit" class="btnRegister"name="" value="Registrar"/><br/></a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInputCorreo" placeholder="correo@ejemplo.com">
-                <label for="floatingInputCorreo">Correo Electrónico</label>
-            </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Clave">
-                <label for="floatingPassword">Clave</label>
-            </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Registrarse</button>
-        </form>
-       
-    
-       
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInputNombre" placeholder="Pepito">
+            <label for="floatingInputNombre">Nombre</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInputApellido" placeholder="Sanchez">
+            <label for="floatingInputApellido">Apellido</label>
+        </div>
+        <div class="form-floating">
+            <input type="date" class="form-control" id="floatingInputFechaNacimiento" placeholder="">
+            <label for="floatingInputFechaNacimiento">Fecha de Nacimiento</label>
+        </div>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInputCorreo" placeholder="correo@ejemplo.com">
+            <label for="floatingInputCorreo">Correo Electrónico</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Clave">
+            <label for="floatingPassword">Clave</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Registrarse</button>
         <p class="mt-5 mb-3 text-muted">¿Ya tienes una cuenta?</p>
         <a routerLink='/login'>Inicia Sesión aquí</a>
       </form>
