@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms'
 import { appRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { MessageService } from './services/message.service';
 
 import { NavBarComponent } from './home/nav-bar/nav-bar.component';
 import { BannerComponent } from './home/banner/banner.component';
@@ -17,6 +16,11 @@ import { HomeComponent } from './home/home.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { EquipoComponent } from './equipo/equipo.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 
 @NgModule({
   declarations: [
@@ -35,9 +39,14 @@ import { ContactanosComponent } from './contactanos/contactanos.component';
     BrowserModule,
     HttpClientModule,
     appRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    NoopAnimationsModule,
+    BrowserAnimationsModule,
+
   ],
-  providers: [MessageService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

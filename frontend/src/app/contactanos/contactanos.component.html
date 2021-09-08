@@ -85,26 +85,28 @@
           </div>
 
       <!-- <form (ngSubmit)="contactForm(form.value)" #form="ngForm"> -->
-        <form (ngSubmit)="contactForm(form.value)" #form="ngForm" >
+
+
+         <form class="contact" [formGroup]="form" method="POST" (ngSubmit)="onSubmit()" >
 
       <div class="col-md-12">
           <h4>Llena este formulario y nos pondremos en contacto contigo lo antes posible.<br></h4>
       </div>
 
-      <div class="form-group-name">       <!-- Full Name -->
+      <div class="form-group-name">       
           <label for="full_name_id" class="control-label">Nombres y Apellidos</label>
-          <input type="text" class="form-control" id="full_name_id" name="nombres" placeholder="Escribe tu nombre" required="" ngModel><br>
+          <input type="text" class="form-control" id="full_name_id"  placeholder="Escribe tu nombre" [formGroup]="nombres" required ><br>
 
-          <div class="form-group-fecha"> <!-- Fecha de nacimiento-->
+          <div class="form-group-fecha"> <
               <label for="fecha" class="control-label" >Fecha de nacimiento</label><br>
-              <input type="date" class="form-control" name="fecha" required="" ngModel>
+              <input type="date" class="form-control" [formGroup]="fechaNacimiento" required="" >
           </div>
       </div>
 
 
-      <div class="form-group"> <!-- Lugar de origen: provincia -->
+      <div class="form-group"> 
           <label for="state_id" class="control-label"><br>Provincia</label>
-          <select class="form-control" id="state_id" name=provincia>
+          <select class="form-control" id="state_id" [formGroup]="provincia">
               <option value="DEF">Elige una provincia</option>
               <option value="AZ">Azuay</option>
               <option value="BO">Bolívar</option>
@@ -133,19 +135,30 @@
           </select>
       </div>
 
-      <div class="form-group-email"> <!-- Correo de contacto-->
+      <div class="form-group-email"> 
           <label for="email_id" class="control-label">Correo electrónico</label>
-          <input type="text" class="form-control" id="email_id" name="email" placeholder="xxxx@xxxx.com" required="" ngModel>
+          <input type="text" class="form-control" id="email_id" [formGroup]="email" placeholder="xxxx@xxxx.com" required>
       </div>
 
       <div class="form-group mt-3">
         <label for="email_id" class="control-label">Detalle</label>
-        <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required="" ngModel></textarea>
+        <textarea class="form-control"[formGroup]="mensaje" rows="5" maxlength="256" placeholder="Mensaje" required ></textarea>
       </div>
 
 
-      <div class="text-center"><button type="submit" class= "btn btn-primary btn-block">Enviar</button></div>
-    </form>
+      <div class="text-center"><button [disabled]="isLoading" type="submit" class= "btn btn-primary btn-block">Enviar</button></div>
+      
+      
+      <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+    <span>{{responseMessage}}</span>
+    </div>
+  
+
+    </form> 
+
+
+
+  
 
 
 
