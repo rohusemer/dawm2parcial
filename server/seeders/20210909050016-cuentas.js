@@ -11,6 +11,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
+    
   },
 
   down: async (queryInterface, Sequelize) => {
@@ -20,5 +21,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
+    await queryInterface.bulkDelete('cuenta', null, {});
   }
 };

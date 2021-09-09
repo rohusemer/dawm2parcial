@@ -43,7 +43,7 @@ registroCtrl.createRegistro = function (req, res, next) {
 
 registroCtrl.getRegistro = function (req, res, next) {
   let id = req.params.id;
-  models.registro.findAll({
+  models.registros.findAll({
      where: {
       id: id
     }
