@@ -31,6 +31,7 @@ app.use('/', indexRouter);
 app.use('/api/cliente', clienteRouter);
 app.use('/api/cuenta', cuentaRouter);
 app.use('/api/registro', registroRouter);
+app.use('/api/cuenta', cuentaRouter);
 app.use("/api/admin", validaToken, adminRouter);
 
 // invocacion a dontenv

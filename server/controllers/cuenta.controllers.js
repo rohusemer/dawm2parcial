@@ -17,21 +17,15 @@ cuentaCtrl.readCuenta = function (req, res, next) {
 cuentaCtrl.createCuenta = function (req, res, next) {
   //res.send('respond with a resource');
   let clienteid = req.body.clienteid;
-  let cuentaid = req.body.cuentaid;
   let tipo = req.body.tipo;
   let monto = req.body.monto;
   let fecha = req.body.fecha;
-  let categoria = req.body.categoria;
-  let descripcion = req.body.descripcion;
 
     models.cuenta.create({
-      clienteid: clienteid,
-      cuentaid: cuentaid,
+      clienteId: clienteid,
       tipo: tipo,
       monto: monto,
       fecha: fecha,
-      categoria: categoria,
-      descripcion: descripcion
         
     })
     .then(cuentas => {
@@ -57,22 +51,16 @@ cuentaCtrl.getCuenta = function (req, res, next) {
 
 cuentaCtrl.editCuenta = function (req, res, next) {
   let id = req.params.id;
-  let clienteid = req.body.clienteid;
-  let cuentaid = req.body.cuentaid;
+  let clienteId = req.body.clienteid;
   let tipo = req.body.tipo;
   let monto = req.body.monto;
   let fecha = req.body.fecha;
-  let categoria = req.body.categoria;
-  let descripcion = req.body.descripcion;
 
     models.cuenta.update({
-      clienteid: clienteid,
-      cuentaid: cuentaid,
+      clienteId: clienteId,
       tipo: tipo,
       monto: monto,
       fecha: fecha,
-      categoria: categoria,
-      descripcion: descripcion
         
     }, {
        where: {
