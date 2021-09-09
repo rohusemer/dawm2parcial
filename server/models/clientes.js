@@ -1,7 +1,5 @@
 const Sequelize = require('sequelize');
-// const bcrypt = require("bcryptjs");
-
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   return sequelize.define('clientes', {
     id: {
       autoIncrement: true,

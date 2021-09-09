@@ -8,6 +8,7 @@ const { promisify } = require('util');
 
 const sequelize = require('../models/index.js').sequelize;
 var initModels = require("../models/init-models");
+const clientes = require('../models/clientes.js');
 var models = initModels(sequelize);
 
 
@@ -128,29 +129,37 @@ clienteCtrl.loginCliente = async (req, res) => {
       correo: correo
     }
   });
-  if (!client) {
-    return res.status(400).json({ error: true,  mensaje: 'Usuario no encontrado' });
+  //if (!client) {
+  //  return res.status(400).json({ error: true,  mensaje: 'Usuario no encontrado' });
     //console.log(client.passwd)
-  }
+  //}
   
   let validPassword =  await bcryptjs.compareSync(pass, client.passwd);
-  if (!validPassword) {
-    return res.status(400).json({ error: true, mensaje: 'contraseña no válida' })
-  }
+  //if (!validPassword) {
+  //  return res.status(400).json({ error: true, mensaje: 'contraseña no válida' })
+  //}
   //uso de JWT
     const token = jwt.sign({
         nombre: client.nombre,
         usuario: client.usuario,
-        id: client.id
+        passwd: client.passwd
         
     }, process.env.TOKEN_SECRET)
-
+  //console.log(token + " " + client.usuario)
+  if (correo == client.correo && validPassword) {
+    res.cookie('jwt', token, { expire: new Date() + 9999 });
+    return res.redirect('http://localhost:4200')
+  } else {
+    res.cookie('jwt', '', { expires: new Date(0) });
+    res.redirect('http://localhost:4200/login')
+  }
+  
   //res.header('auth-token', token).json({
   //      error: null,
   //      data: {token},
   //      //mensaje: "Sesion Iniciada"
   //})
-  return res.redirect('http://localhost:4200')
+  
 
   
 }
