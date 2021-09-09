@@ -1,11 +1,21 @@
 const clienteCtrl = {}
 //invocar bcryptjs
 const bcryptjs = require('bcrypt');
+const Joi = require('@hapi/joi');
+require('dotenv').config()
+const jwt = require('jsonwebtoken');
 const { promisify } = require('util');
 
 const sequelize = require('../models/index.js').sequelize;
 var initModels = require("../models/init-models");
 var models = initModels(sequelize);
+
+
+
+const schemaLogin = Joi.object({
+    correo: Joi.string().min(6).max(255).required().email(),
+    pass: Joi.string().min(6).max(1024).required()
+})
 
 clienteCtrl.readCliente = function (req, res, next) {
   models.clientes.findAll({ 
@@ -28,7 +38,6 @@ clienteCtrl.createCliente = function (req, res, next) {
   let pass = req.body.pass;
   let salt = bcryptjs.genSaltSync(8);
   let passhash = bcryptjs.hashSync(pass, salt);
-  console.log(passhash)
     models.clientes.create({
       nombre: nombre,
       apellidos: apellido,
@@ -40,7 +49,7 @@ clienteCtrl.createCliente = function (req, res, next) {
         
     })
     .then(clientes => {
-        res.redirect('http://localhost:4200/'); //modificar el url a mostrar
+        res.redirect('http://localhost:4200/login'); //modificar el url a mostrar
       //res.send(clientes)
     })
     .catch(error => res.status(400).send(error))
@@ -105,5 +114,46 @@ clienteCtrl.deleteCliente = function (req, res, next) {
    .catch(error => res.status(400).send(error))
   //res.send('respond with a resource');
 }
+clienteCtrl.loginCliente = async (req, res) => {
+  let correo = req.body.correo
+  let pass = req.body.pass
+  const { error } = schemaLogin.validate(req.body);
+  
+  if (error) {
+    //return res.status(400).json({ error: error.details[0].message })
+    res.redirect('http://localhost:4200/login')
+  }
+  const client = await models.clientes.findOne({
+     where: {
+      correo: correo
+    }
+  });
+  if (!client) {
+    return res.status(400).json({ error: true,  mensaje: 'Usuario no encontrado' });
+    //console.log(client.passwd)
+  }
+  
+  let validPassword =  await bcryptjs.compareSync(pass, client.passwd);
+  if (!validPassword) {
+    return res.status(400).json({ error: true, mensaje: 'contraseña no válida' })
+  }
+  //uso de JWT
+    const token = jwt.sign({
+        nombre: client.nombre,
+        usuario: client.usuario,
+        id: client.id
+        
+    }, process.env.TOKEN_SECRET)
+
+  res.header('auth-token', token).json({
+        error: null,
+        data: {token},
+        //mensaje: "Sesion Iniciada"
+  })
+  //return res.redirect('http://localhost:4200')
+
+  
+}
+
 
 module.exports = clienteCtrl;

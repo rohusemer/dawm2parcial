@@ -1,15 +1,15 @@
 <body class="text-center">
     
     <main class="form-signin fade-in">
-      <form action="">
+      <form method="POST" action="http://localhost:4000/api/cliente">
         <a routerLink='/' ><img class="mb-4" src="../assets/img/logo-01.png" alt="Moneytracker logo" width="auto" height="100"></a>
         <h1 class="h3 mb-3 fw-normal">¡Bienvenido!</h1>
         <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="correo@ejemplo.com">
+            <input type="email" class="form-control" id="floatingInput" name="correo" placeholder="correo@ejemplo.com">
             <label for="floatingInput">Correo Electrónico</label>
             </div>
             <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Clave">
+            <input type="password" class="form-control" id="floatingPassword" name="pass" placeholder="Clave">
             <label for="floatingPassword">Clave</label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesión</button>

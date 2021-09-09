@@ -11,12 +11,13 @@ const configMensaje = require('./src/configMensaje.js')
 var indexRouter = require('./routes/index');
 var clienteRouter = require('./routes/cliente.rutas');
 var registroRouter = require('./routes/registro.rutas');
-var authRouter = require('./routes/auth.rutas');
+var validaToken = require('./middleware/valida-token')
+
+var adminRouter = require("./routes/admin");
 
 var app = express();
 app.use(bodyParser.json());
 app.use(cors());
-//app.use(bcryptjs());
 
 
 app.use(logger('dev'));
@@ -28,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api/cliente', clienteRouter);
 app.use('/api/registro', registroRouter);
-app.use('/auth', authRouter);
+app.use("/api/admin", validaToken, adminRouter);
 
 // invocacion a dontenv
 const dotenv = require('dotenv');

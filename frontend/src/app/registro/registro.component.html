@@ -1,32 +1,42 @@
 <body class="text-center">
     
     <main class="form-signin fade-in">
-      <form action="">
+      <form method="post" action="http://localhost:4000/api/cliente">
         <a routerLink='/' ><img class="mb-4" src="../assets/img/logo-01.png" alt="Moneytracker logo" width="auto" height="100"></a>
         <h1 class="h3 mb-3 fw-normal">¡Creemos tu nueva cuenta!</h1>
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInputNombre" placeholder="Pepito">
+            <input type="text"  class="form-control" id="floatingInputNombre" name="nombre" placeholder="Pepito">
             <label for="floatingInputNombre">Nombre</label>
         </div>
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInputApellido" placeholder="Sanchez">
-            <label for="floatingInputApellido">Apellido</label>
+            <input type="text" class="form-control" id="floatingInputApellido" name="apellido" placeholder="Sanchez">
+             <label for="floatingInputApellido">Apellido</label>
         </div>
         <div class="form-floating">
-            <input type="date" class="form-control" id="floatingInputFechaNacimiento" placeholder="">
+            <input type="string" class="form-control" id="floatingInputUser" name="user" maxlength="6"
+                placeholder="User">
+            <label for="floatingInputUser">Ususario</label>
+        </div>
+        <div class="form-floating">
+            <input type="date" class="form-control" id="floatingInputFechaNacimiento" name="fechanacimiento" placeholder="">
             <label for="floatingInputFechaNacimiento">Fecha de Nacimiento</label>
         </div>
         <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInputCorreo" placeholder="correo@ejemplo.com">
+            <input type="email" class="form-control" id="floatingInputCorreo" name="correo" placeholder="correo@ejemplo.com">
             <label for="floatingInputCorreo">Correo Electrónico</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Clave">
-            <label for="floatingPassword">Clave</label>
+            <input type="string" class="form-control" id="floatingInputCedula" name="cedula" maxlength="10" placeholder="correo@ejemplo.com">
+            <label for="floatingInputCedula">Cedula</label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Registrarse</button>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" name="pass" placeholder="Clave">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <button class="btn btn-primary btn-block confirm-button">Registrarse</button>
         <p class="mt-5 mb-3 text-muted">¿Ya tienes una cuenta?</p>
         <a routerLink='/login'>Inicia Sesión aquí</a>
-      </form>
+      </form> 
     </main>
-</body>
+</body> 
+
