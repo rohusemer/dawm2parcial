@@ -145,12 +145,12 @@ clienteCtrl.loginCliente = async (req, res) => {
         
     }, process.env.TOKEN_SECRET)
 
-  res.header('auth-token', token).json({
-        error: null,
-        data: {token},
-        //mensaje: "Sesion Iniciada"
-  })
-  //return res.redirect('http://localhost:4200')
+  //res.header('auth-token', token).json({
+  //      error: null,
+  //      data: {token},
+  //      //mensaje: "Sesion Iniciada"
+  //})
+  return res.redirect('http://localhost:4200')
 
   
 }
