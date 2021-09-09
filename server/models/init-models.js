@@ -2,11 +2,13 @@ var DataTypes = require("sequelize").DataTypes;
 var _clientes = require("./clientes");
 var _cuenta = require("./cuenta");
 var _registros = require("./registros");
+var _subscripcions = require("./subscripcions");
 
 function initModels(sequelize) {
   var clientes = _clientes(sequelize, DataTypes);
   var cuenta = _cuenta(sequelize, DataTypes);
   var registros = _registros(sequelize, DataTypes);
+  var subscripcions = _subscripcions(sequelize, DataTypes);
 
   cuenta.belongsTo(clientes, { as: "cliente", foreignKey: "clienteId"});
   clientes.hasMany(cuenta, { as: "cuenta", foreignKey: "clienteId"});
@@ -19,6 +21,7 @@ function initModels(sequelize) {
     clientes,
     cuenta,
     registros,
+    subscripcions,
   };
 }
 module.exports = initModels;

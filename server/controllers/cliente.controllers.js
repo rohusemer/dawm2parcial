@@ -148,7 +148,7 @@ clienteCtrl.loginCliente = async (req, res) => {
   //console.log(token + " " + client.usuario)
   if (correo == client.correo && validPassword) {
     res.cookie('jwt', token, { expire: new Date() + 9999 });
-    return res.redirect('http://localhost:4200')
+    return res.redirect('http://localhost:4200/dashboard')
   } else {
     res.cookie('jwt', '', { expires: new Date(0) });
     res.redirect('http://localhost:4200/login')

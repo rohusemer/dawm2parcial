@@ -12,6 +12,7 @@ var indexRouter = require('./routes/index');
 var clienteRouter = require('./routes/cliente.rutas');
 var cuentaRouter = require('./routes/cuenta.rutas');
 var registroRouter = require('./routes/registro.rutas');
+var subsRouter = require('./routes/subscripcion.rutas');
 var validaToken = require('./middleware/valida-token')
 
 var adminRouter = require("./routes/admin");
@@ -32,6 +33,7 @@ app.use('/api/cliente', clienteRouter);
 app.use('/api/cuenta', cuentaRouter);
 app.use('/api/registro', registroRouter);
 app.use('/api/cuenta', cuentaRouter);
+app.use('/api/subscripcion', subsRouter);
 app.use("/api/admin", validaToken, adminRouter);
 
 // invocacion a dontenv

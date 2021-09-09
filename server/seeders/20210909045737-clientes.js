@@ -11,15 +11,6 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    const clientes = await queryInterface.sequelize.query(
-      `SELECT id from clientes;`
-    );
-    const clientesRows = clientes[0]
-    await queryInterface.bulkInsert('clientes', [
-      {fecha: new Date(), id: clientesRows[0].id, createdAt: new Date(), updatedAt: new Date()},
-      {fecha: new Date(), id: clientesRows[1].id, createdAt: new Date(), updatedAt: new Date()},
-      {fecha: new Date(), id: clientesRows[2].id, createdAt: new Date(), updatedAt: new Date()},
-    ], {});
   },
 
   down: async (queryInterface, Sequelize) => {
