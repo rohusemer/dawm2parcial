@@ -35,8 +35,8 @@ registroCtrl.createRegistro = function (req, res, next) {
         
     })
     .then(registros => {
-        //res.redirect('http://localhost:4200/'); //modificar el url a mostrar
-      res.send(registros)
+      res.redirect('http://localhost:4200/estadisticas'); //modificar el url a mostrar
+      //res.send(registros)
     })
     .catch(error => res.status(400).send(error))
 }

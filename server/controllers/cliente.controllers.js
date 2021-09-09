@@ -115,6 +115,15 @@ clienteCtrl.deleteCliente = function (req, res, next) {
    .catch(error => res.status(400).send(error))
   //res.send('respond with a resource');
 }
+
+clienteCtrl.logoutCliente = function(req, res, next){
+  //res.cookie('connect.sid', '', {expires: new Date(1), path: '/' });
+  req.logOut();
+  req.session.destroy(function (err) {
+        res.redirect('http://localhost:4200/'); 
+    });      
+}
+
 clienteCtrl.loginCliente = async (req, res) => {
   let correo = req.body.correo
   let pass = req.body.pass
@@ -129,15 +138,15 @@ clienteCtrl.loginCliente = async (req, res) => {
       correo: correo
     }
   });
-  //if (!client) {
-  //  return res.status(400).json({ error: true,  mensaje: 'Usuario no encontrado' });
-    //console.log(client.passwd)
-  //}
+  if (!client) {
+    return res.status(400).json({ error: true,  mensaje: 'Usuario no encontrado' });
+  console.log(client.passwd)
+  }
   
   let validPassword =  await bcryptjs.compareSync(pass, client.passwd);
-  //if (!validPassword) {
-  //  return res.status(400).json({ error: true, mensaje: 'contraseña no válida' })
-  //}
+  if (!validPassword) {
+    return res.status(400).json({ error: true, mensaje: 'contraseña no válida' })
+  }
   //uso de JWT
     const token = jwt.sign({
         nombre: client.nombre,
@@ -150,7 +159,11 @@ clienteCtrl.loginCliente = async (req, res) => {
     res.cookie('jwt', token, { expire: new Date() + 9999 });
     return res.redirect('http://localhost:4200/dashboard')
   } else {
-    res.cookie('jwt', '', { expires: new Date(0) });
+    res.cookie('jwt', '', { 
+      httpOnly: true, 
+      secure: true,
+      sameSite: "none", 
+      expires: new Date(0) });
     res.redirect('http://localhost:4200/login')
   }
   

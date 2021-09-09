@@ -29,8 +29,8 @@ cuentaCtrl.createCuenta = function (req, res, next) {
         
     })
     .then(cuentas => {
-        //res.redirect('http://localhost:4200/'); //modificar el url a mostrar
-      res.send(cuentas)
+      res.redirect('http://localhost:4200/estadisticas'); //modificar el url a mostrar
+      //res.send(cuentas)
     })
     .catch(error => res.status(400).send(error))
 }
@@ -68,7 +68,7 @@ cuentaCtrl.editCuenta = function (req, res, next) {
     }
     })
     .then(cuentas => {
-        //res.redirect('http://localhost:4200/'); //modificar el url a mostrar
+      res.redirect('http://localhost:4200/registros'); //modificar el url a mostrar
       res.send(cuentas)
     })
     .catch(error => res.status(400).send(error))

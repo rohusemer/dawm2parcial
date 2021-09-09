@@ -5,6 +5,7 @@ const clienteCtrl = require('../controllers/cliente.controllers.js')
 
 
 router.get('/', clienteCtrl.readCliente);
+router.get('/logout', clienteCtrl.logoutCliente);
 router.post('/', clienteCtrl.createCliente);
 router.post('/login', clienteCtrl.loginCliente);
 router.get('/:id', clienteCtrl.getCliente);
