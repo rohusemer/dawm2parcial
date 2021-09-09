@@ -16,22 +16,23 @@ subsCtrl.readSubs = function (req, res, next) {
 
 subsCtrl.createSubs = function (req, res, next) {
   //res.send('respond with a resource');
-  let nombresApellidos = req.body.nombresApellidos;
+  let nombresApellidos = req.body.nombres;
   let fecha = req.body.fecha;
   let provincia = req.body.provincia;
   let email = req.body.email;
-  let detalle = req.body.detalle;
+  let detalle = req.body.message;
 
     models.subscripcions.create({
       nombresApellidos: nombresApellidos,
       fecha: fecha,
       provincia: provincia,
+      email:email,
       detalle: detalle,
         
     })
     .then(subscripcions => {
-        //res.redirect('http://localhost:4200/'); //modificar el url a mostrar
-      res.send(subscripcions)
+      res.redirect('http://localhost:4200/contactanos'); //modificar el url a mostrar
+      //res.send(subscripcions)
     })
     .catch(error => res.status(400).send(error))
 }
