@@ -56,7 +56,7 @@ registroCtrl.getRegistro = function (req, res, next) {
 }
 
 registroCtrl.editRegistro = function (req, res, next) {
-  let id = req.params.id;
+  let id = req.body.id;
   let clienteid = req.body.clienteid;
   let cuentaid = req.body.cuentaid;
   let tipo = req.body.tipo;
@@ -95,7 +95,8 @@ registroCtrl.deleteRegistro = function (req, res, next) {
     }
   })
    .then(registros => {
-      res.send(registros)
+      //res.send(registros)
+      res.redirect('http://localhost:4200/registros');
    })
    .catch(error => res.status(400).send(error))
   //res.send('respond with a resource');

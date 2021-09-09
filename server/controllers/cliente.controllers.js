@@ -103,7 +103,7 @@ clienteCtrl.editCliente = function (req, res, next) {
 }
 
 clienteCtrl.deleteCliente = function (req, res, next) {
-  let id = req.params.id;
+  let id = req.body.id;
   models.clientes.destroy({
      where: {
       id: id
