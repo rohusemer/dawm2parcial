@@ -10,6 +10,7 @@ const configMensaje = require('./src/configMensaje.js')
 
 var indexRouter = require('./routes/index');
 var clienteRouter = require('./routes/cliente.rutas');
+var cuentaRouter = require('./routes/cuenta.rutas');
 var registroRouter = require('./routes/registro.rutas');
 var validaToken = require('./middleware/valida-token')
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/cliente', clienteRouter);
+app.use('/api/cuenta', cuentaRouter);
 app.use('/api/registro', registroRouter);
 app.use("/api/admin", validaToken, adminRouter);
 

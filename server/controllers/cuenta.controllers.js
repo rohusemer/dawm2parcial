@@ -1,20 +1,20 @@
-const registroCtrl = {}
+const cuentaCtrl = {}
 
 const sequelize = require('../models/index.js').sequelize;
 var initModels = require("../models/init-models");
 var models = initModels(sequelize);
 
-registroCtrl.readRegistro = function (req, res, next) {
-  models.registros.findAll({ 
+cuentaCtrl.readCuenta = function (req, res, next) {
+  models.cuenta.findAll({ 
      attributes: { exclude: ["updatedAt"] }
    })
-   .then(registros => {
-      res.send(registros)
+   .then(cuentas => {
+      res.send(cuentas)
    })
    .catch(error => res.status(400).send(error))
 }
 
-registroCtrl.createRegistro = function (req, res, next) {
+cuentaCtrl.createCuenta = function (req, res, next) {
   //res.send('respond with a resource');
   let clienteid = req.body.clienteid;
   let cuentaid = req.body.cuentaid;
@@ -24,7 +24,7 @@ registroCtrl.createRegistro = function (req, res, next) {
   let categoria = req.body.categoria;
   let descripcion = req.body.descripcion;
 
-    models.registros.create({
+    models.cuenta.create({
       clienteid: clienteid,
       cuentaid: cuentaid,
       tipo: tipo,
@@ -34,28 +34,28 @@ registroCtrl.createRegistro = function (req, res, next) {
       descripcion: descripcion
         
     })
-    .then(registros => {
+    .then(cuentas => {
         //res.redirect('http://localhost:4200/'); //modificar el url a mostrar
-      res.send(registros)
+      res.send(cuentas)
     })
     .catch(error => res.status(400).send(error))
 }
 
-registroCtrl.getRegistro = function (req, res, next) {
+cuentaCtrl.getCuenta = function (req, res, next) {
   let id = req.params.id;
-  models.registros.findAll({
+  models.cuenta.findAll({
      where: {
       id: id
     }
   })
-   .then(registros => {
-      res.send(registros)
+   .then(cuentas => {
+      res.send(cuentas)
    })
    .catch(error => res.status(400).send(error))
   //res.send('respond with a resource');
 }
 
-registroCtrl.editRegistro = function (req, res, next) {
+cuentaCtrl.editCuenta = function (req, res, next) {
   let id = req.params.id;
   let clienteid = req.body.clienteid;
   let cuentaid = req.body.cuentaid;
@@ -65,7 +65,7 @@ registroCtrl.editRegistro = function (req, res, next) {
   let categoria = req.body.categoria;
   let descripcion = req.body.descripcion;
 
-    models.registros.update({
+    models.cuenta.update({
       clienteid: clienteid,
       cuentaid: cuentaid,
       tipo: tipo,
@@ -79,26 +79,26 @@ registroCtrl.editRegistro = function (req, res, next) {
         id: id
     }
     })
-    .then(registros => {
+    .then(cuentas => {
         //res.redirect('http://localhost:4200/'); //modificar el url a mostrar
-      res.send(registros)
+      res.send(cuentas)
     })
     .catch(error => res.status(400).send(error))
   //res.send('respond with a resource');
 }
 
-registroCtrl.deleteRegistro = function (req, res, next) {
+cuentaCtrl.deleteCuenta = function (req, res, next) {
   let id = req.params.id;
-  models.registros.destroy({
+  models.cuenta.destroy({
      where: {
       id: id
     }
   })
-   .then(registros => {
-      res.send(registros)
+   .then(cuentas => {
+      res.send(cuentas)
    })
    .catch(error => res.status(400).send(error))
   //res.send('respond with a resource');
 }
 
-module.exports = registroCtrl;
+module.exports = cuentaCtrl;
